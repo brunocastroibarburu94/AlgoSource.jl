@@ -7,7 +7,7 @@ RUN apt-get update
 RUN apt-get -y install make git
 
 # Set work directory
-WORKDIR "/root/project"
+WORKDIR "/root/AlgoSource"
 
 # Get Packages requirements
 # Replace manifest and project tomls with the ones in project 

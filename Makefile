@@ -2,7 +2,7 @@ run:
 	julia --project=./project ./srjumpstart_srcc/main.jl 
 
 julia:
-	julia --project=./project
+	cd /root & julia --project=./project
 
 createPackage:
 	julia --project=./project ./jumpstart_src/new_package.jl

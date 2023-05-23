@@ -1,5 +1,14 @@
-# Julia Development Environment
-Empty template for a new project using Julia, this version is using Julia 1.8.5-bullseye, ammend Dockerfile to change to the version of Julia you want to use.
+# AlgoSource
+
+[![Build Status](https://github.com/brunocastroibarburu94/AlgoSource.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/brunocastroibarburu94/AlgoSource.jl/actions/workflows/CI.yml?query=branch%3Amain)
+
+
+
+
+# Local Development Guidelines
+This repository besides hosting the package [AlgoSource.jl](https://github.com/brunocastroibarburu94/AlgoSource.jl), also provides a complete develepoment environment for the community to be able to test and further develop the package, this is achieved through the usage of Docker.
+
+Some snippets of code below can be useful for novice users.
 
 ### Creating an SSH key
 ```bash
@@ -50,5 +59,20 @@ make julia
 ```julia
 include("./src/main.jl")
 ```
+
+
+### Instantiating the Docker container
+```bash
+. local_container.sh
+```
+
+
+### Trigger Unit Tests
+```julia
+# Press ] tp enter into REPL mode and type the following:
+activate ../AlgoSource
+test
+```
+
 
 Unlike Python, at the moment there is no way of executing a Julia script heat a breakpoint and open a console, the two options above are the only ways (I know of) to enter a debugging environment.

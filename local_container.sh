@@ -1,12 +1,13 @@
-PROJECT_NAME=new-project
+PROJECT_NAME=algo-source-dev
 
-docker build  -t ${PROJECT_NAME}-image   .
-
-# For Windows with SSH
+# docker build  -t ${PROJECT_NAME}-image   .
+# AlgoSource
+# Run container on Windows with SSH connection to GitHub already configured
 winpty docker run --rm -it \
 --env-file ./.env \
---mount type=bind,source="$(PWD)",target=/root/project \
+--mount type=bind,source="$(PWD)",target=/root/AlgoSource \
 --mount type=bind,source="$HOME/.ssh",target=/root/.ssh \
+--mount  type=bind,source="$HOME/.gitconfig",target=/etc/gitconfig \
 --name ${PROJECT_NAME}-container \
 -p 8080:8080 \
 --entrypoint bash \

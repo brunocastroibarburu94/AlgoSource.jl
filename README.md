@@ -89,3 +89,9 @@ test
 
 
 Unlike Python, at the moment there is no way of executing a Julia script heat a breakpoint and open a console, the two options above are the only ways (I know of) to enter a debugging environment.
+
+### Reload the module 
+Julia does not like reloading modules on command.
+```julia
+include("src/AlgoSource.jl")
+```

@@ -1,6 +1,8 @@
 name = "AlgoSource"
 uuid = "94819ca1-02e2-4d0c-af20-c929ea0f6589"
 authors = ["Bruno-Castro"]
+julia_version = "1.8.5"
+manifest_format = "2.0"
 version = "0.0.0-DEV"
 
 [deps]

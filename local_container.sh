@@ -9,6 +9,8 @@ winpty docker run --rm -it \
 --mount type=bind,source="$HOME/.ssh",target=/root/.ssh \
 --mount  type=bind,source="$HOME/.gitconfig",target=/etc/gitconfig \
 --name ${PROJECT_NAME}-container \
--p 8080:8080 \
+-p 8031:8031 \
 --entrypoint bash \
 ${PROJECT_NAME}-image 
+
+winpty docker exec -it ${PROJECT_NAME}-container bash

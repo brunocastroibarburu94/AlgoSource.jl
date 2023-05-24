@@ -2,7 +2,20 @@
 
 [![Build Status](https://github.com/brunocastroibarburu94/AlgoSource.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/brunocastroibarburu94/AlgoSource.jl/actions/workflows/CI.yml?query=branch%3Amain)
 
+### Goal of this package
+This package has the goal of centralize the retrieval of financial data from multiple data sources, the long term vision of this package also involves data management and caching for small big data.
 
+Many platforms provide data in different formats and with different API interfaces and authentication methods, this package allows you to connect to any source of data and extract from it seamlessly without worrying about fusion and wrangling with other datasets, if the source of data you want is not among our existing sources open an issue so that it can be in the radar for future releases.
+
+### Existing connections
+1. YahooFinance: This is achieved by creating a link through [PyCall](https://github.com/JuliaPy/PyCall.jl) with  the python library [yfinance](https://github.com/ranaroussi/yfinance).
+
+### How to use
+
+```julia
+# Open a julia console and type ] to enter REPL mode, then enter the following to add the package to your project:
+add "https://github.com/brunocastroibarburu94/AlgoSource.jl.git#master"
+```
 
 
 # Local Development Guidelines
@@ -69,7 +82,7 @@ include("./src/main.jl")
 
 ### Trigger Unit Tests
 ```julia
-# Press ] tp enter into REPL mode and type the following:
+# Press ] to enter into REPL mode and type the following:
 activate ../AlgoSource
 test
 ```
